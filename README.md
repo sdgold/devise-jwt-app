@@ -22,4 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# devise-jwt-app
+# initial setup - in place: rails 6.0.2.1 app with ruby 2.7.0; configured middleware; configured devise; configured devise-jwt in devise.rb; migrations for user table; using login,logout,signup for defaults;
