@@ -299,14 +299,17 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
   # custom config
+  # jwt.secret = Rails.application.secrets.jwt_secret
+  # jwt.secret = SECRETS.devise_jwt_secret_key
 
   config.jwt do |jwt|
-    jwt.secret = Rails.application.secrets.jwt_secret
+
+    jwt.secret = "58cd2483a79146c3c6208086c698257fd0149ef9067166c916b3388fc51eacc71268e27ed0686df20f626aa6c4f3570f7e01ef021978f331e4da400c04ae815e"
     jwt.dispatch_requests = [
-        ['POST', %r{^/login$}]
+        ['POST', %r{^/api/users/sign_in$}]
       ]
       jwt.revocation_requests = [
-        ['DELETE', %r{^/logout$}]
+        ['DELETE', %r{^/api/users/sign_out$}]
       ]
     jwt.expiration_time = 5.minutes.to_i
   end
