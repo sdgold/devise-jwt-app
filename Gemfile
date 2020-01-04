@@ -26,6 +26,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 
 # custom added gems
+gem 'pry-rails', '0.3.9'
+
 gem 'devise'
 gem 'devise-jwt', '~> 0.6.0'
 
