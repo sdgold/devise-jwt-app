@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   scope :api, defaults: {format: :json} do
     devise_scope :user do
       post '/login', to: "sessions#create"
+      post '/sign_up', to: "registrations#create"
     end
   end
 end
